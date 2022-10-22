@@ -36,17 +36,17 @@
 
 from random import *
 
-class Cat:
+class Student:
 	def __init__(self, name):
 		self.name = name
 		self.gladness = 50
 		self.progress = 0
 		self.alive = True
 		
-	def eat(self):
-		print('eat time')
+	def study(self):
+		print('Study time')
 		self.progress += 0.12
-		self.gladness = 3
+		self.gladness -= 5
 		
 	def sleep(self):
 		print('Sleep time')
@@ -56,7 +56,12 @@ class Cat:
 		print('Chill time')
 		self.gladness += 5
 		self.progress -= 0.1
-		
+
+  def money(self):
+    print('Money')
+    self.progress += 1
+    self.gladness -= 0.5
+    
 	def is_alive(self):
 		if self.progress < -0.5:
 			print('Sooo bad')
@@ -65,7 +70,7 @@ class Cat:
 			print('Depression...')
 			self.alive = False
 		elif self.progress > 5:
-			print('wasp stung!!!')
+			print('Passed the exam!')
 			self.alive = False
 		
 	def end(self):
@@ -76,15 +81,16 @@ class Cat:
 		print('Day:',day)
 		live_cube = randint(1,3)
 		if live_cube == 1:
-			self.eat()
+			self.study()
 		elif live_cube == 2:
 			self.sleep()
 		elif live_cube == 3:
 			self.chill()
+    self.money()
 		self.end()
 		self.is_alive()
 
-obj = Cat('Bob')
+obj = Student('Bob')
 
 for day in range(365):
 	if obj.alive == False:
