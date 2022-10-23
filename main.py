@@ -1,34 +1,46 @@
-class Human:
-	def __init__(self, name):
-		self.name = name
-		self.gender = 'None'
-		self.age = 0 
-	def happybirthday(self):
-		self.age += 1 
-		print('I am', self.age)
-	def live(self):
-		print(self.name, 'is alive')
+class Animal:
+  def __init__(self, name):
+    self.place = 'home'
+    self.gender = 'Famale'
+    self.eat_tipe = 'eat meat'
+  def eat(self):
+      print('I can eat meat')
+  def drink(self):
+		  print('I can drink')
+class Cat(Animal):
+  def __init__(self, name):
+    super().__init__(name)
+  def drink(self):
+    print('I can drink')
+class Dog(Animal):
+  def __init__(self, name):
+    super().__init__(name)
+    self.place = 'yard'
+    self.gender = 'male'
+class Hamster(Animal):
+  def __init__(self, name):
+    super().__init__(name)
+    self.gender = 'male'
+    self.eat_tipe = ' eat seeds'
+	# def study(self):
+	# 	print(self.name,' can study')
+    
 
-class Parent(Human):
-	def work(self):
-		print('I can work')
+# obj = Child('Bob')
+# obj.study()
+# obj.live()
+# obj.happybirthday()
+# obj.happybirthday()
+# obj.happybirthday()
+obj = Dog('Sharik')
 
-class Child(Human):
-	
-	def study(self):
-		print(self.name,' can study')
+obj2 = Cat('Monika')
+obj2.eat()
+obj2.drink()
 
-obj = Child('Bob')
-obj.study()
-obj.live()
-obj.happybirthday()
-obj.happybirthday()
-obj.happybirthday()
-
-obj2 = Parent('Jane')
-obj2.work()
-for i in range(30):
-    obj2.happybirthday()
+obj3 = Hamster('White')
+# for i in range(30):
+#     obj2.happybirthday()
 # a = 4
 # print('a')
 # print(a)
