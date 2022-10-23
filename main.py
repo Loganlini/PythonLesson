@@ -36,12 +36,29 @@
 
 from random import *
 
+class University:
+	def __init__(self, title, faculty):
+		self.title = title
+		self.faculty = faculty
+		self.budget = False;
+	def check_progress(self, student):
+		if student > 3:
+			self.budget = True
+		self.isbudget()
+
+	def isbudget(self):
+		if self.budget == True:
+			print('Congratulation! You are on budget!')
+
 class Student:
 	def __init__(self, name):
 		self.name = name
 		self.gladness = 50
 		self.progress = 0
 		self.alive = True
+
+	def ask_budget(self, university):
+		university.check_progress(self.progress)
 		
 	def study(self):
 		print('Study time')
@@ -56,12 +73,7 @@ class Student:
 		print('Chill time')
 		self.gladness += 5
 		self.progress -= 0.1
-
-  def money(self):
-    print('Money')
-    self.progress += 1
-    self.gladness -= 0.5
-    
+		
 	def is_alive(self):
 		if self.progress < -0.5:
 			print('Sooo bad')
@@ -79,6 +91,8 @@ class Student:
 		
 	def live(self, day):
 		print('Day:',day)
+		if day % 10 == 0:
+			self.ask_budget(univer)
 		live_cube = randint(1,3)
 		if live_cube == 1:
 			self.study()
@@ -86,14 +100,13 @@ class Student:
 			self.sleep()
 		elif live_cube == 3:
 			self.chill()
-    self.money()
 		self.end()
 		self.is_alive()
 
 obj = Student('Bob')
-
+univer = University('Step Univer', 'Computer Science')
 for day in range(365):
 	if obj.alive == False:
 		break
 	obj.live(day)
-		
+	
