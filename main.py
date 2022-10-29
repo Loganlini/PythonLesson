@@ -1,27 +1,22 @@
-class Animal:
+class Parent:
   def __init__(self, name):
     self.place = 'home'
     self.gender = 'Famale'
-    self.eat_tipe = 'eat meat'
+    self.rich = 'rich'
   def eat(self):
-      print('I can eat meat')
+      print('My favourite food is Pasta')
   def drink(self):
-		  print('I can drink')
-class Cat(Animal):
+		  print('My favourite drink is Water')
+  def gender(self):
+      print('I am Female')
+class Human(Parent):
   def __init__(self, name):
     super().__init__(name)
-  def drink(self):
-    print('I can drink')
-class Dog(Animal):
-  def __init__(self, name):
-    super().__init__(name)
-    self.place = 'yard'
-    self.gender = 'male'
-class Hamster(Animal):
-  def __init__(self, name):
-    super().__init__(name)
-    self.gender = 'male'
-    self.eat_tipe = ' eat seeds'
+  def gender(self):
+      print('I am Male')
+  
+  
+
 	# def study(self):
 	# 	print(self.name,' can study')
     
@@ -32,13 +27,13 @@ class Hamster(Animal):
 # obj.happybirthday()
 # obj.happybirthday()
 # obj.happybirthday()
-obj = Dog('Sharik')
+# obj = Dog('Sharik')
 
-obj2 = Cat('Monika')
-obj2.eat()
-obj2.drink()
+# obj2 = Cat('Monika')
+# obj2.eat()
+# obj2.drink()
 
-obj3 = Hamster('White')
+# obj3 = Hamster('White')
 # for i in range(30):
 #     obj2.happybirthday()
 # a = 4
