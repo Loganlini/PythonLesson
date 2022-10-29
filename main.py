@@ -9,6 +9,7 @@ class Parent:
 		  print('My favourite drink is Water')
   def gender(self):
       print('I am Female')
+      print('I can go')
 class Human(Parent):
   def __init__(self, name):
     super().__init__(name)
