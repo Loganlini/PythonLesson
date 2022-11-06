@@ -1,90 +1,89 @@
-def ginger(deco):
-	def wrapper():
-		deco()
-		print('ginger')
-	return wrapper
+# def ginger(deco):
+# 	def wrapper():
+# 		deco()
+# 		print('ginger')
+# 	return wrapper
 
-def hard_worker(deco):
-	def wrapper():
-		deco()
-		print('hard worker')
-	return wrapper
+# def hard_worker(deco):
+# 	def wrapper():
+# 		deco()
+# 		print('hard worker')
+# 	return wrapper
 
-def friendly(deco):
-	def wrapper():
-		deco()
-		print('friendly')
-	return wrapper
+# def friendly(deco):
+# 	def wrapper():
+# 		deco()
+# 		print('friendly')
+# 	return wrapper
   
-def wrinkles(deco):
-	def wrapper():
-		deco()
-		print('wrinkles')
-	return wrapper
+# def wrinkles(deco):
+# 	def wrapper():
+# 		deco()
+# 		print('wrinkles')
+# 	return wrapper
 
-def freckles(deco):
-	def wrapper():
-		deco()
-		print('freckles')
-	return wrapper
+# def freckles(deco):
+# 	def wrapper():
+# 		deco()
+# 		print('freckles')
+# 	return wrapper
 
-def scar(deco):
-	def wrapper():
-		deco()
-		print('scar')
-	return wrapper
-@friendly
-@hard_worker
-@ginger
-@freckles
-@wrinkles
-@scar
-def human():
-	print('This is human')
+# def scar(deco):
+# 	def wrapper():
+# 		deco()
+# 		print('scar')
+# 	return wrapper
+# @friendly
+# @hard_worker
+# @ginger
+# @freckles
+# @wrinkles
+# @scar
+# def human():
+# 	print('This is human')
 
-human()
+# human()
 
 # def bread(func):
 #     def wrapper():
 #         fu
 # def sandwich():
 #     print('This is sandwich')
-# def ask_age():
-# 	num1 = sign = num2 =''
-	# sign = ''
-	# num2 = ''
-# 	while num1 == '' or sign == '' or num2 == '':
-# 		try:
-# 			num1 = int(input('Input your number 1: '))	
-# 			num2 = int(input('Input your number 2: '))
-# 			sign = input('Input your sign:')
-# 			if sign == '+' or sign == '-' or sign == '*' or sign == '/':
-# 				print(num1,sign,num2)
-# 			else:
-# 				sign = ''
-# 				raise ValueError
-# 		except ValueError:
-# 			print('You need to write normal evaluation')
-
-# 		if sign == '+':
-# 			print(num1,sign,num2,'=',num1+num2)
-# 		elif sign == '/':
-# 			try:
-# 				print(num1,sign,num2,'=',num1/num2)
-# 			except:
-# 				print('This is division by zero!!!')
-# 		print('The end of program')
-# def ask_age2():
-# 	age = ''
-# 	while age =='':
-# 		age = int(input('Input your age: '))
-# 		print('Your age is', age)
-# 	print('The end of program')
-
-# ask_age()
+from tkinter import *
 
 
+class Main(Frame):
+    def __init__(self, root):
+        super(Main, self).__init__(root)
+        self.build()
 
+    def build(self):
+        pass
+ 
+    def logicalc(self, operation):
+        pass
+
+    def update():
+       pass
+
+
+if __name__ == '__main__':
+    root = Tk()
+    root["bg"] = "#000"
+    root.geometry("485x550+200+200")
+    root.title("Калькулятор")
+    root.resizable(False, False)
+    app = Main(root)
+    app.pack()
+    root.mainloop() 
+
+btns = [
+            "C", "DEL", "*", "=",
+            "1", "2", "3", "/",
+            "4", "5", "6", "+",
+            "7", "8", "9", "-",
+            "+/-", "0", "%", "X^2"
+        ]
 # class Human:
 # 	def __init__(self, name):
 # 		self.name = name
