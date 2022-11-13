@@ -1,3 +1,4 @@
+
 # def ginger(deco):
 # 	def wrapper():
 # 		deco()
@@ -42,63 +43,54 @@
 # def human():
 # 	print('This is human')
 
-# human()
+ # human()
 
 # def bread(func):
 #     def wrapper():
 #         fu
 # def sandwich():
 #     print('This is sandwich')
-from tkinter import *
+# from tkinter import *
 
 
-class Main(Frame):
-    def __init__(self, root):
-        super(Main, self).__init__(root)
-        self.build()
+# class Main(Frame):
+#     def __init__(self, root):
+#         super(Main, self).__init__(root)
+#         self.build()
 
-    def build(self):
-        pass
+#     def build(self):
+#         pass
  
-    def logicalc(self, operation):
-        pass
+#     def logicalc(self, operation):
+#         pass
 
-    def update():
-       pass
+#     def update():
+#        pass
 
 
-if __name__ == '__main__':
-    root = Tk()
-    root["bg"] = "#000"
-    root.geometry("485x550+200+200")
-    root.title("Калькулятор")
-    root.resizable(False, False)
-    app = Main(root)
-    app.pack()
-    root.mainloop() 
+# if __name__ == '__main__':
+#     root = Tk()
+#     root["bg"] = "#000"
+#     root.geometry("485x550+200+200")
+#     root.title("Калькулятор")
+#     root.resizable(False, False)
+#     app = Main(root)
+#     app.pack()
+#     root.mainloop() 
 
-btns = [
-            "C", "DEL", "*", "=",
-            "1", "2", "3", "/",
-            "4", "5", "6", "+",
-            "7", "8", "9", "-",
-            "+/-", "0", "%", "X^2"
-        ]
-# class Human:
-# 	def __init__(self, name):
-# 		self.name = name
-# 		self.gender = 'None'
-# 		self.age = 0
-# 	def live(self):
-# 		print(self.name, 'is alive')
+# btns = [
+#             "C", "DEL", "*", "=",
+#             "1", "2", "3", "/",
+#             "4", "5", "6", "+",
+#             "7", "8", "9", "-",
+#             "+/-", "0", "%", "X^2"
+#         ]
 # 	def happybirthday(self):
 # 		self.age +=1 
 # 		print('I am', self.age)
 # 	def eat(self):
 # 		print('I am eating')
-# # Создать класс Животное. От него наследуются классы котик, собачка и хомяк.
-# # В классе животное есть 3 поля (характеристики) и 2 поведения (методы)
-# # В классах конкретных животных нужно добавить еще 1 поведение
+
 # class Parent(Human):
 # 	def __init__(self,name):
 # 		super.__init__()
@@ -239,13 +231,22 @@ btns = [
 # # 			self.sleep()
 # # 		elif live_cube == 3:
 # # 			self.chill()
-# # 		self.end()
-# # 		self.is_alive()
+ # 		self.end()
+ # 		self.is_alive()
 
-# # obj = Student('Bob')
-# # univer = University('Step Univer', 'Computer Science')
-# # for day in range(365):
-# # 	if obj.alive == False:
-# # 		break
-# # 	obj.live(day)
+ # obj = Student('Bob')
+ # univer = University('Step Univer', 'Computer Science')
+ # for day in range(365):
+ # 	if obj.alive == False:
+ # 		break
+ # 	obj.live(day)
 		
+class Fly:
+ 	def __init__(self, name):
+ 		self.size = 'Big'
+ 		self.type = 'Fly'
+ 		self.food = 'Shit'
+ 	def eating(self):
+ 	  print('I can eat')
+  def flying(self):
+    print('I can fly')
